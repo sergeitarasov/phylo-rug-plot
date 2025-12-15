@@ -1,0 +1,418 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=316;
+	taxlabels
+	Amietina_larrochei
+	Amphistomus_primonactus
+	Anonychonitis_freyi
+	Anoplostethus_sp
+	Aphodius_immundus
+	Apotolamprus_aff_ambohitsitondronensi
+	Apotolamprus_aff_latipennis
+	Apotolamprus_aff_metallicus
+	Apotolamprus_aff_metallicus_1
+	Apotolamprus_aff_sparsepunctatus
+	Apotolamprus_perinetensis
+	Apotolamprus_quadrimaculatus
+	Apotolamprus_quadrinotatus
+	Apotolamprus_sp
+	Apotolamprus_sp1
+	Apotolamprus_sp_morpho_1
+	Apotolamprus_vadoni
+	Apterepilissus_ovalis
+	Arachnodes_aff_robinsoni
+	Arachnodes_aff_saprinoides
+	Arachnodes_oberthuri
+	Arachnodes_pusillus
+	Arachnodes_saprinoides
+	Arachnodes_saprinoides_1
+	Arachnodes_sp
+	Arachnodes_sp1
+	Arachnodes_sp2
+	Arachnodes_sp3
+	Arachnodes_sp4
+	Arachnodes_sp5
+	Arachnodes_sp6
+	Arachnodes_sp7_cf_insularis
+	Arachnodes_sp_morpho_1
+	Arachnodes_sp_morpho_2
+	Bohepilissus_sp1
+	Bohepilissus_sp_sp1
+	Byrrhidium_namaquensis
+	Caccobius_binodulus
+	Caccobius_schereberi
+	Cambefortantus_pauliani
+	Cambefortantus_pauliani_1
+	Catharsius_cf_molossus
+	Catharsius_sp
+	Chalconotus_convexus
+	Chalconotus_convexus_1
+	Cheironitis_scabrosus
+	Chrysina_resplendens
+	Circellium_bacchus
+	Cleptocaccobius_viridicollis
+	Copridaspidus_peregrinus
+	Copris_Paracopris_sp
+	Copris_fidius
+	Copris_gilleti
+	Copris_nevinsoni
+	Copris_sl_diversus
+	Copris_sp2
+	Copris_urus
+	Coptodactyla_brooksi
+	Coptorhina_klugii
+	Cyptochirus_sp1
+	Dicranocara_deschodti
+	Digitonthophagus_gazella
+	Diorygopyx_dudplodentatus
+	Drepanopodus_proximus
+	Dwesasilvasedis_medinae
+	Endroedyolus_paradoxus
+	Eophileurus_sp
+	Epactoides_aff_Lissus
+	Epactoides_aff_Semiaeneus
+	Epactoides_aff_major
+	Epactoides_femoralis
+	Epactoides_hanski
+	Epactoides_jounii
+	Epactoides_jounii_1
+	Epactoides_major
+	Epactoides_mangabeensis
+	Epactoides_olsoufieffi
+	Epactoides_semiaeneus
+	Epactoides_sp
+	Epactoides_sp2
+	Epactoides_sp3
+	Epilissus_aff_antoetrae
+	Epilissus_aff_morio_group
+	Epilissus_aff_planatus
+	Epilissus_aff_semilissus
+	Epilissus_alluaudi
+	Epilissus_apotolamproides
+	Epilissus_cuprarius
+	Epilissus_fuscovirens
+	Epilissus_morio
+	Epilissus_sp1
+	Epilissus_sp_morpho_1
+	Epilissus_sp_morpho_2
+	'Epilissus_splendidus splendidus'
+	Epilissus_splendidus_cf_delphinensis
+	Epirinus_cf_silvestris
+	Epirinus_flagellatus
+	Epirinus_sp1
+	Euoniticellus_fulvus
+	Euoniticellus_sp
+	Eusaproecius_sp1
+	Frankenbergerius_armatus
+	Frankenbergerius_armatus_1
+	Garreta_unicolor
+	Geotrupes_opacus
+	Geotrupes_splendidus
+	Grebennikovius_lupanganus_sp_n1
+	Gymnopleurus_aenescens
+	Gyronotus_pumilus
+	Hammondantus_psammophilus
+	Hammondantus_psammophilus_1
+	Hamonthophagus_depressus
+	Haroldius_sp1
+	Haroldius_sp2
+	Helictopleurus_aurocupreus
+	Helictopleurus_cambeforti
+	Helictopleurus_carbonarius
+	Helictopleurus_cf_furcicornis
+	Helictopleurus_cf_steineri_n_sp
+	Helictopleurus_coruscus
+	Helictopleurus_cribricollis
+	Helictopleurus_dorbignyi
+	'Helictopleurus_fasciolatus suturalis'
+	Helictopleurus_fasciolatus_fasciolatus
+	Helictopleurus_fasciolatus_obscurus
+	Helictopleurus_fasciolatus_pseudofasciolatus
+	Helictopleurus_fissicollis
+	'Helictopleurus_fissicollis morettoi'
+	Helictopleurus_fissicollis_australis
+	Helictopleurus_fulgens
+	'Helictopleurus_fulgens purpuricollis'
+	Helictopleurus_furcicornis
+	Helictopleurus_giganteus
+	Helictopleurus_hanskii
+	Helictopleurus_marsyas
+	Helictopleurus_n_sp
+	Helictopleurus_neoamplicollis
+	Helictopleurus_neuter
+	Helictopleurus_nicollei
+	Helictopleurus_nigricans
+	Helictopleurus_perrieri
+	Helictopleurus_peyrierasi
+	Helictopleurus_politicollis
+	Helictopleurus_quadripunctatus
+	Helictopleurus_rudicollis
+	Helictopleurus_semivirens
+	Helictopleurus_sicardi
+	Helictopleurus_sicardi_1
+	Helictopleurus_sicardi_2
+	Helictopleurus_sinuatocornis
+	Helictopleurus_sp_group_semivirens
+	Helictopleurus_splendidicollis
+	Helictopleurus_steineri
+	Helictopleurus_undatus
+	Helictopleurus_unifasciatus
+	Helictopleurus_vadoni
+	Helictopleurus_viettei
+	Helictopleurus_viridans_pseudoviridans
+	Helictopleurus_viridans_viridans
+	Heliocopris_sp
+	Heliocopris_sp_1
+	Heteronitis_ragazzii
+	Hexodon_sp1
+	Hybosoridae_sp1_Madagascar
+	Hybosoridae_sp2_Laos
+	Hybosorus_illigeri
+	Ischiopsophra_sp
+	Janssensantus_cf_inexpectatus
+	Janssensantus_cf_inexpectatus_1
+	Janssensantus_cf_inexpectatus_2
+	Janssensantus_mabuensis_n_sp
+	Kheper_nigroaeneus
+	Kurtops_signatus
+	Lamprima_sp
+	Lepidiota_sp
+	Liatongus_sp
+	Liparochrus_sp
+	Litocopris_muticus
+	Lucanus_capreolus
+	Macroderes_foveatus
+	Macroderes_sp1
+	Macronthophagus_diabolicus
+	Marronus_borbonicus
+	Megalonitis_bohemani
+	Metacatharsius_opacus
+	Metacatharsius_sp1
+	Microcopris_sp1
+	Nanos_aff
+	Nanos_aff_Bicoloratus
+	Nanos_aff_Pseudominutus
+	Nanos_aff_humeralis
+	Nanos_aff_mirjae
+	Nanos_aff_rubrosignatus
+	Nanos_aff_viridissimus
+	Nanos_bicoloratus
+	Nanos_dubitatus
+	Nanos_morpho_2
+	Nanos_sp
+	Nanos_sp1
+	Nanos_sp10
+	Nanos_sp11
+	Nanos_sp2
+	Nanos_sp4
+	Nanos_sp5
+	Nanos_sp6
+	Nanos_sp7
+	Nanos_sp8
+	Nanos_sp9
+	Nanos_vadoni
+	Nesosisyphus_pygmaeus
+	Nesosisyphus_regnardi
+	Nesosisyphus_rotundatus
+	Nesosisyphus_vicinus
+	Nesovinsionia_vinsoni
+	Nesovinsionia_vinsoni_1
+	Nicrophorus_orbicollis
+	Nicrophorus_vespilloides
+	Ochichanton_sp1
+	Odontoloma_planatum
+	Odontoloma_sp1
+	Omorgus_sp
+	Oniticellus_planatus
+	Onitis_alexis
+	Onitis_caffer
+	Onitis_uncinatus
+	Onthophagus_Bicornonthophagus_interstitialis
+	Onthophagus_Euonthophagus_flavimargo
+	Onthophagus_Furconthophagus_variegatus
+	Onthophagus_Gibbonthophagus_rectecornutus
+	Onthophagus_Hikidaeus_waterstradti
+	Onthophagus_Micronthophagus_sp1
+	Onthophagus_Onthophagiellus_cf_sp1
+	Onthophagus_Palaeonthophagus_gibbulus
+	Onthophagus_Paraphanaeomorphus_aff_phanaeiformis
+	Onthophagus_Parascatonomus_tricornis
+	'Onthophagus_Pseudophanaeomorphus_quasijohkii aff'
+	Onthophagus_Serrophorus_seniculus
+	Onthophagus_Sunenaga_streltsovi_cf
+	Onthophagus_cf_bicavifrons
+	Onthophagus_cf_muelleri
+	Onthophagus_pipitzi
+	Onthophagus_probus
+	Onthophagus_sl_baeri
+	Onthophagus_sl_batillifer
+	Onthophagus_sl_borneensis
+	Onthophagus_sl_cf_quadrimaculatus
+	Onthophagus_sl_giraffa
+	Onthophagus_sl_laevis
+	Onthophagus_sl_lamelliger
+	Onthophagus_sl_leucopygus
+	Onthophagus_sl_pilosus
+	Onthophagus_sl_sp1_cf_gr_yangi
+	Onthophagus_sl_vinctus
+	Onthophagus_sl_vulpes
+	Onthophagus_sstr_obscurior
+	Onthophagus_taurus
+	Onycothechus_tricornigeris
+	Orphninae_sp1
+	Oryctes_borbonicus
+	Oryctes_rhinoceros
+	Pachylomera_femoralis
+	Pachysoma_hippocrates
+	Panelus_rhodesiensis
+	Panelus_sp3
+	Paragymnopleurus_sp
+	Paragymnopleurus_sp_1
+	Paraphytus_cf_hindu
+	Parascatonomus_anceyi
+	Pedaria_sp
+	Pedaria_sp1
+	Pedaria_sp2
+	Phalops_flavocinctus
+	Phanaeus_dejeani
+	Popillia_japonica
+	Proagoderus_cf_lanista
+	Proagoderus_sapphirinus
+	Protaetia_brevitarsis
+	Pycnopanelus_krikkeni
+	S_Neosisyphus_barbarossa
+	S_Neosisyphus_calcaratus
+	S_Neosisyphus_infuscatus
+	S_Neosisyphus_mirabilis
+	S_Neosisyphus_rubrus
+	S_Neosisyphus_spinipes
+	Sarophorus_costatus
+	Sarophorus_costatus_1
+	Sarrophorus_costatus
+	Scaptocnemis_segregis
+	Scarabaeolus_intricatus
+	Scarabaeus_n_sp1
+	Scarabaeus_westwoodi
+	Sceliages_hippias
+	Sceliages_hippias_1
+	Semanopterus_sp
+	Sisyphini_sp_morpho1
+	Sisyphini_sp_morpho6
+	Sisyphini_sp_morpho8
+	Sisyphini_sp_morpho_10
+	Sisyphus_australis
+	Sisyphus_gazanus
+	Sisyphus_inconspicuus
+	Sisyphus_manni
+	Sisyphus_muricatus
+	Sisyphus_schaefferi
+	Sisyphus_sordidus
+	Sisyphus_umbraphilus
+	Synapsis_sp
+	Tanzanolus_sp1
+	Tanzanolus_sp2
+	Temnoplectron_lewisensis
+	Thyregis_relictus
+	Trichaulax_sp
+	Trypoxylus_dichotomus
+	Xinidium_dentilabris
+	Xinidium_dewitzi
+	Xylonichus_sp
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (Amphistomus_primonactus:1.0,((Coptodactyla_brooksi:1.0,Thyregis_relictus:1.0)[&label=1]:0.485028,(Temnoplectron_lewisensis:1.0,(Diorygopyx_dudplodentatus:1.0,(Phanaeus_dejeani:1.0,(((Onycothechus_tricornigeris:1.0,((Pedaria_sp2:1.0,(Pedaria_sp:1.0,Pedaria_sp1:1.0)[&label=1]:0.701471)[&label=1]:0.312592,((Microcopris_sp1:1.0,(Litocopris_muticus:1.0,Copris_sl_diversus:1.0)[&label=1]:0.205668)[&label=0.6]:0.017444,((Copris_fidius:1.0,Copris_gilleti:1.0)[&label=0.96]:0.061967,((Copris_sp2:1.0,Copris_urus:1.0)[&label=0.99]:0.048909,(Copris_nevinsoni:1.0,Copris_Paracopris_sp:1.0)[&label=1]:0.257583)[&label=0.22]:0.0)[&label=1]:0.055257)[&label=1]:0.784702)[&label=1]:0.081211)[&label=1]:0.064571,('Epilissus_splendidus splendidus':1.0,((Apterepilissus_ovalis:1.0,(Arachnodes_oberthuri:1.0,(Arachnodes_sp6:1.0,Arachnodes_sp_morpho_1:1.0)[&label=1]:0.151616)[&label=1]:0.14211)[&label=0.95]:0.036478,((Arachnodes_sp5:1.0,(Arachnodes_sp1:1.0,((Arachnodes_sp2:1.0,Arachnodes_aff_robinsoni:1.0)[&label=1]:0.063626,(Arachnodes_saprinoides_1:1.0,(Arachnodes_saprinoides:1.0,(Arachnodes_aff_saprinoides:1.0,(Arachnodes_sp_morpho_2:1.0,Arachnodes_sp:1.0)[&label=0.73]:0.021115)[&label=0.64]:0.015097)[&label=0.94]:0.034161)[&label=1]:0.424846)[&label=1]:0.065141)[&label=0.72]:0.019862)[&label=0.82]:0.026498,(Arachnodes_sp3:1.0,((Arachnodes_sp7_cf_insularis:1.0,(Arachnodes_pusillus:1.0,Arachnodes_sp4:1.0)[&label=0.55]:0.020808)[&label=0.77]:0.022524,((Epilissus_aff_semilissus:1.0,(Epilissus_sp_morpho_2:1.0,Epilissus_splendidus_cf_delphinensis:1.0)[&label=1]:0.12755)[&label=1]:0.292366,((Epilissus_alluaudi:1.0,Epilissus_aff_planatus:1.0)[&label=1]:0.189033,((Epilissus_sp1:1.0,(Epilissus_apotolamproides:1.0,Epilissus_aff_antoetrae:1.0)[&label=1]:0.242818)[&label=0.55]:0.011107,(Epilissus_fuscovirens:1.0,(Epilissus_aff_morio_group:1.0,(Epilissus_morio:1.0,(Epilissus_sp_morpho_1:1.0,Epilissus_cuprarius:1.0)[&label=1]:0.067432)[&label=1]:0.114104)[&label=1]:0.103446)[&label=1]:0.056452)[&label=0.54]:0.010008)[&label=1]:0.082653)[&label=1]:0.102666)[&label=0.9]:0.031322)[&label=0.67]:0.020306)[&label=0.91]:0.031085)[&label=1]:0.127087)[&label=1]:0.388808)[&label=0.77]:0.021653,((Nanos_aff:1.0,(Nanos_vadoni:1.0,((Nanos_aff_Pseudominutus:1.0,(Nanos_sp1:1.0,Nanos_aff_Bicoloratus:1.0)[&label=1]:0.139909)[&label=1]:0.182403,((Nanos_bicoloratus:1.0,((Cambefortantus_pauliani:1.0,Cambefortantus_pauliani_1:1.0)[&label=1]:0.371459,((Nanos_sp2:1.0,Nanos_sp4:1.0)[&label=0.84]:0.030336,(Nanos_aff_humeralis:1.0,Nanos_sp5:1.0)[&label=0.53]:0.010433)[&label=1]:0.261173)[&label=1]:0.184698)[&label=1]:0.193305,(((Apotolamprus_sp_morpho_1:1.0,Apotolamprus_aff_metallicus_1:1.0)[&label=1]:0.66668,((Apotolamprus_quadrinotatus:1.0,(Apotolamprus_vadoni:1.0,(Apotolamprus_quadrimaculatus:1.0,Apotolamprus_aff_ambohitsitondronensi:1.0)[&label=1]:0.175646)[&label=1]:0.199841)[&label=1]:0.071039,(Apotolamprus_perinetensis:1.0,(Apotolamprus_sp1:1.0,(Apotolamprus_aff_sparsepunctatus:1.0,(Apotolamprus_aff_latipennis:1.0,Apotolamprus_aff_metallicus:1.0)[&label=0.51]:0.010582)[&label=1]:0.355079)[&label=1]:0.17078)[&label=1]:0.154849)[&label=1]:0.061746)[&label=1]:0.060105,((Nanos_aff_rubrosignatus:1.0,Nanos_sp6:1.0)[&label=0.38]:0.003099,((Nanos_sp9:1.0,Nanos_sp:1.0)[&label=1]:0.568362,((Nanos_sp7:1.0,Nanos_sp11:1.0)[&label=1]:0.365766,((Nanos_sp10:1.0,(Nanos_aff_viridissimus:1.0,Nanos_sp8:1.0)[&label=0.81]:0.025247)[&label=1]:0.202689,(Apotolamprus_sp:1.0,(Nanos_aff_mirjae:1.0,(Nanos_dubitatus:1.0,Nanos_morpho_2:1.0)[&label=0.93]:0.040283)[&label=1]:0.221909)[&label=0.53]:0.009747)[&label=1]:0.19122)[&label=1]:0.123852)[&label=0.8]:0.023814)[&label=1]:0.07665)[&label=0.97]:0.039574)[&label=0.99]:0.045251)[&label=0.93]:0.064042)[&label=0.91]:0.077998)[&label=1]:0.451504,(((Metacatharsius_opacus:1.0,Metacatharsius_sp1:1.0)[&label=1]:0.462748,(Catharsius_cf_molossus:1.0,(Catharsius_sp:1.0,Copridaspidus_peregrinus:1.0)[&label=1]:0.065254)[&label=1]:0.626829)[&label=1]:0.311408,(((Gyronotus_pumilus:1.0,(Chalconotus_convexus:1.0,Chalconotus_convexus_1:1.0)[&label=1]:0.525875)[&label=1]:0.261226,(Circellium_bacchus:1.0,(Kheper_nigroaeneus:1.0,(Pachysoma_hippocrates:1.0,((Scarabaeus_n_sp1:1.0,(Drepanopodus_proximus:1.0,Pachylomera_femoralis:1.0)[&label=1]:0.097588)[&label=0.46]:0.023495,((Scarabaeolus_intricatus:1.0,Scarabaeus_westwoodi:1.0)[&label=1]:0.129547,(Sceliages_hippias:1.0,Sceliages_hippias_1:1.0)[&label=1]:0.82987)[&label=1]:0.075682)[&label=1]:0.137409)[&label=0.99]:0.057216)[&label=1]:0.552872)[&label=1]:0.073264)[&label=0.97]:0.037277,((Synapsis_sp:1.0,(Heliocopris_sp_1:1.0,Heliocopris_sp:1.0)[&label=1]:0.665444)[&label=0.9]:0.076422,(((Nesovinsionia_vinsoni_1:1.0,Nesovinsionia_vinsoni:1.0)[&label=1]:2.49909,(Tanzanolus_sp1:1.0,Tanzanolus_sp2:1.0)[&label=1]:2.0062)[&label=0.79]:0.022445,((Paragymnopleurus_sp_1:1.0,(Gymnopleurus_aenescens:1.0,(Garreta_unicolor:1.0,Paragymnopleurus_sp:1.0)[&label=1]:0.491914)[&label=1]:0.276906)[&label=1]:0.174395,((Janssensantus_mabuensis_n_sp:1.0,(Janssensantus_cf_inexpectatus_2:1.0,(Janssensantus_cf_inexpectatus_1:1.0,Janssensantus_cf_inexpectatus:1.0)[&label=0.66]:0.051496)[&label=1]:0.609644)[&label=1]:1.26963,((((Paraphytus_cf_hindu:1.0,(((Sarophorus_costatus:1.0,(Sarophorus_costatus_1:1.0,Sarrophorus_costatus:1.0)[&label=1]:0.14995)[&label=1]:1.63636,(Coptorhina_klugii:1.0,(Frankenbergerius_armatus:1.0,Frankenbergerius_armatus_1:1.0)[&label=1]:1.60788)[&label=0.91]:0.037037)[&label=1]:0.843609,((Haroldius_sp1:1.0,Haroldius_sp2:1.0)[&label=1]:1.45654,((Byrrhidium_namaquensis:1.0,Dicranocara_deschodti:1.0)[&label=1]:1.46674,(Endroedyolus_paradoxus:1.0,(Odontoloma_planatum:1.0,Odontoloma_sp1:1.0)[&label=1]:0.840417)[&label=1]:0.182058)[&label=1]:0.153204)[&label=1]:0.331126)[&label=0.04]:0.050557)[&label=1]:0.099994,(Aphodius_immundus:1.0,((Nicrophorus_vespilloides:1.0,Nicrophorus_orbicollis:1.0)[&label=1]:2.02365,((Hybosoridae_sp2_Laos:1.0,(Hybosorus_illigeri:1.0,Hybosoridae_sp1_Madagascar:1.0)[&label=1]:1.4853)[&label=1]:0.524818,((Liparochrus_sp:1.0,((Geotrupes_opacus:1.0,Geotrupes_splendidus:1.0)[&label=1]:1.27499,(Omorgus_sp:1.0,(Lamprima_sp:1.0,Lucanus_capreolus:1.0)[&label=1]:0.223905)[&label=1]:0.117359)[&label=1]:0.125059)[&label=0.99]:0.063072,(Orphninae_sp1:1.0,((Lepidiota_sp:1.0,Xylonichus_sp:1.0)[&label=1]:0.108123,((Protaetia_brevitarsis:1.0,(Ischiopsophra_sp:1.0,Trichaulax_sp:1.0)[&label=1]:0.824101)[&label=1]:0.529273,((Anoplostethus_sp:1.0,Chrysina_resplendens:1.0)[&label=1]:0.204522,(Popillia_japonica:1.0,(Semanopterus_sp:1.0,(Trypoxylus_dichotomus:1.0,(Hexodon_sp1:1.0,(Eophileurus_sp:1.0,(Oryctes_rhinoceros:1.0,(Marronus_borbonicus:1.0,Oryctes_borbonicus:1.0)[&label=1]:0.187738)[&label=1]:0.199319)[&label=0.8]:0.072802)[&label=0.94]:0.093637)[&label=1]:0.201096)[&label=1]:0.227575)[&label=0.99]:0.140713)[&label=1]:0.118677)[&label=0.59]:0.034945)[&label=1]:0.104767)[&label=1]:0.36628)[&label=0.66]:0.03275)[&label=0.83]:0.092837)[&label=1]:0.309071)[&label=1]:0.14604)[&label=0]:0.045621,((Panelus_rhodesiensis:1.0,Panelus_sp3:1.0)[&label=1]:0.276824,((Bohepilissus_sp_sp1:1.0,Bohepilissus_sp1:1.0)[&label=1]:2.54283,((Ochichanton_sp1:1.0,(Epactoides_semiaeneus:1.0,(Grebennikovius_lupanganus_sp_n1:1.0,((Epactoides_sp3:1.0,(Epactoides_olsoufieffi:1.0,Epactoides_mangabeensis:1.0)[&label=1]:0.089926)[&label=1]:0.074564,((Epactoides_aff_Semiaeneus:1.0,(Epactoides_aff_Lissus:1.0,(Epactoides_hanski:1.0,Epactoides_sp2:1.0)[&label=0.74]:0.021455)[&label=1]:0.118073)[&label=1]:0.259374,((Epactoides_jounii:1.0,(Epactoides_sp:1.0,Epactoides_jounii_1:1.0)[&label=0.95]:0.047905)[&label=1]:0.878862,(Epactoides_aff_major:1.0,(Epactoides_major:1.0,Epactoides_femoralis:1.0)[&label=1]:0.063259)[&label=1]:0.815654)[&label=1]:0.08081)[&label=1]:0.070771)[&label=1]:0.122794)[&label=1]:0.238932)[&label=1]:0.270323)[&label=1]:0.824966,((Epirinus_cf_silvestris:1.0,(Epirinus_sp1:1.0,Epirinus_flagellatus:1.0)[&label=1]:1.01412)[&label=1]:0.451849,((Nesosisyphus_rotundatus:1.0,(Nesosisyphus_pygmaeus:1.0,(Nesosisyphus_regnardi:1.0,Nesosisyphus_vicinus:1.0)[&label=1]:0.141723)[&label=0.35]:0.057772)[&label=1]:0.897632,((Sisyphini_sp_morpho1:1.0,((Sisyphus_manni:1.0,Sisyphus_muricatus:1.0)[&label=0.99]:0.060306,(Sisyphus_gazanus:1.0,(Sisyphus_australis:1.0,(Sisyphus_inconspicuus:1.0,Sisyphus_sordidus:1.0)[&label=0.99]:0.058155)[&label=1]:0.157671)[&label=1]:0.606174)[&label=1]:0.107785)[&label=1]:0.154743,((Sisyphini_sp_morpho8:1.0,(Sisyphus_schaefferi:1.0,(Sisyphini_sp_morpho_10:1.0,Sisyphini_sp_morpho6:1.0)[&label=1]:0.638341)[&label=0.82]:0.027608)[&label=0.84]:0.031135,(Sisyphus_umbraphilus:1.0,((S_Neosisyphus_rubrus:1.0,(S_Neosisyphus_infuscatus:1.0,S_Neosisyphus_spinipes:1.0)[&label=1]:0.159509)[&label=1]:0.234411,(S_Neosisyphus_mirabilis:1.0,(S_Neosisyphus_barbarossa:1.0,S_Neosisyphus_calcaratus:1.0)[&label=1]:0.447806)[&label=0.87]:0.040147)[&label=1]:0.108924)[&label=0.49]:0.016121)[&label=1]:0.135662)[&label=1]:0.157131)[&label=1]:1.00498)[&label=1]:0.318975)[&label=1]:0.069094)[&label=0.97]:0.041637)[&label=0.99]:0.051677)[&label=1,!rotate=true]:0.064921,(((Pycnopanelus_krikkeni:1.0,(Hammondantus_psammophilus:1.0,Hammondantus_psammophilus_1:1.0)[&label=1]:1.04945)[&label=1]:0.646468,((Dwesasilvasedis_medinae:1.0,((Xinidium_dentilabris:1.0,Xinidium_dewitzi:1.0)[&label=1]:0.603032,(Macroderes_foveatus:1.0,Macroderes_sp1:1.0)[&label=1]:0.518894)[&label=1]:0.246158)[&label=1]:0.05987,(Cheironitis_scabrosus:1.0,((Onitis_alexis:1.0,Anonychonitis_freyi:1.0)[&label=1]:0.081522,((Heteronitis_ragazzii:1.0,Onitis_uncinatus:1.0)[&label=1]:0.115984,(Onitis_caffer:1.0,Megalonitis_bohemani:1.0)[&label=1]:0.087135)[&label=1]:0.132604)[&label=1]:0.130679)[&label=1]:0.683161)[&label=1]:0.056815)[&label=1]:0.105721,((Kurtops_signatus:1.0,(Hamonthophagus_depressus:1.0,(Digitonthophagus_gazella:1.0,(Phalops_flavocinctus:1.0,Onthophagus_probus:1.0)[&label=0.66]:0.020788)[&label=1]:0.096666)[&label=0.84]:0.124016)[&label=0.87]:0.106853,(((Caccobius_binodulus:1.0,(Onthophagus_sl_sp1_cf_gr_yangi:1.0,(Onthophagus_Furconthophagus_variegatus:1.0,Onthophagus_sl_lamelliger:1.0)[&label=1]:0.466572)[&label=0.3]:0.0)[&label=1]:0.153938,((Onthophagus_sl_vinctus:1.0,(Onthophagus_sl_borneensis:1.0,('Onthophagus_Pseudophanaeomorphus_quasijohkii aff':1.0,(Onthophagus_Euonthophagus_flavimargo:1.0,Onthophagus_Bicornonthophagus_interstitialis:1.0)[&label=0.57]:0.043175)[&label=1]:0.131068)[&label=0.99]:0.08531)[&label=1]:0.053606,((Onthophagus_Palaeonthophagus_gibbulus:1.0,Amietina_larrochei:1.0)[&label=0.99]:0.054219,((Onthophagus_sl_baeri:1.0,(Onthophagus_taurus:1.0,(Onthophagus_Gibbonthophagus_rectecornutus:1.0,Onthophagus_sstr_obscurior:1.0)[&label=1]:0.061881)[&label=1]:0.301562)[&label=1]:0.238123,((Onthophagus_sl_batillifer:1.0,((Onthophagus_Hikidaeus_waterstradti:1.0,Onthophagus_Paraphanaeomorphus_aff_phanaeiformis:1.0)[&label=1]:0.403365,(Onthophagus_sl_vulpes:1.0,(Onthophagus_Onthophagiellus_cf_sp1:1.0,Onthophagus_Micronthophagus_sp1:1.0)[&label=1]:0.360716)[&label=0.88]:0.028821)[&label=0.87]:0.037598)[&label=1]:0.195896,(Eusaproecius_sp1:1.0,((Caccobius_schereberi:1.0,Cleptocaccobius_viridicollis:1.0)[&label=1]:0.120349,(Onthophagus_sl_leucopygus:1.0,(Onthophagus_sl_cf_quadrimaculatus:1.0,(Onthophagus_cf_bicavifrons:1.0,(Onthophagus_sl_giraffa:1.0,Onthophagus_sl_pilosus:1.0)[&label=1]:0.090004)[&label=0.85]:0.041513)[&label=0.43]:0.011826)[&label=1]:0.11051)[&label=0.93]:0.051512)[&label=1]:0.120445)[&label=0.58]:0.020143)[&label=1]:0.07766)[&label=0.93]:0.031123)[&label=0.5]:0.008228)[&label=1]:0.364606,((Macronthophagus_diabolicus:1.0,((Onthophagus_pipitzi:1.0,(Proagoderus_sapphirinus:1.0,Proagoderus_cf_lanista:1.0)[&label=1]:0.348681)[&label=0.83]:0.036828,((Parascatonomus_anceyi:1.0,Onthophagus_Parascatonomus_tricornis:1.0)[&label=1]:0.339626,((Onthophagus_cf_muelleri:1.0,Onthophagus_Serrophorus_seniculus:1.0)[&label=0.99]:0.047251,(Onthophagus_Sunenaga_streltsovi_cf:1.0,Onthophagus_sl_laevis:1.0)[&label=0.96]:0.03936)[&label=1]:0.047926)[&label=1]:0.069518)[&label=0.35]:0.051235)[&label=0.99]:0.064883,(((Euoniticellus_sp:1.0,Euoniticellus_fulvus:1.0)[&label=1]:0.713193,(Oniticellus_planatus:1.0,(Liatongus_sp:1.0,(Cyptochirus_sp1:1.0,Scaptocnemis_segregis:1.0)[&label=1]:0.066057)[&label=0.68]:0.018594)[&label=1]:0.060735)[&label=0.48]:0.008606,(Helictopleurus_sicardi_2:1.0,((Helictopleurus_vadoni:1.0,Helictopleurus_neoamplicollis:1.0)[&label=1]:0.226599,(((Helictopleurus_viettei:1.0,Helictopleurus_peyrierasi:1.0)[&label=1]:0.106521,(Helictopleurus_sicardi:1.0,Helictopleurus_sicardi_1:1.0)[&label=1]:0.260993)[&label=1]:0.185155,((Helictopleurus_carbonarius:1.0,(Helictopleurus_cambeforti:1.0,(Helictopleurus_steineri:1.0,((Helictopleurus_dorbignyi:1.0,Helictopleurus_sp_group_semivirens:1.0)[&label=1]:0.149669,(Helictopleurus_cf_steineri_n_sp:1.0,Helictopleurus_semivirens:1.0)[&label=1]:0.062861)[&label=1]:0.055369)[&label=1]:0.194699)[&label=1]:0.154115)[&label=0.97]:0.038629,(((Helictopleurus_marsyas:1.0,Helictopleurus_nicollei:1.0)[&label=1]:0.213027,((Helictopleurus_giganteus:1.0,Helictopleurus_sinuatocornis:1.0)[&label=1]:0.077109,(Helictopleurus_aurocupreus:1.0,Helictopleurus_coruscus:1.0)[&label=0.68]:0.019292)[&label=1]:0.140062)[&label=1]:0.233791,(Helictopleurus_cribricollis:1.0,((Helictopleurus_quadripunctatus:1.0,(Helictopleurus_unifasciatus:1.0,Helictopleurus_perrieri:1.0)[&label=1]:0.07948)[&label=0.98]:0.047633,((Helictopleurus_undatus:1.0,Helictopleurus_rudicollis:1.0)[&label=1]:0.052662,(Helictopleurus_politicollis:1.0,(((Helictopleurus_viridans_pseudoviridans:1.0,Helictopleurus_viridans_viridans:1.0)[&label=1]:0.205092,(Helictopleurus_hanskii:1.0,('Helictopleurus_fulgens purpuricollis':1.0,(Helictopleurus_fulgens:1.0,Helictopleurus_nigricans:1.0)[&label=1]:0.162894)[&label=1]:0.085143)[&label=1]:0.12795)[&label=0.98]:0.043249,(Helictopleurus_splendidicollis:1.0,(('Helictopleurus_fissicollis morettoi':1.0,(Helictopleurus_fissicollis_australis:1.0,Helictopleurus_fissicollis:1.0)[&label=0.57]:0.012666)[&label=1]:0.232961,(Helictopleurus_neuter:1.0,((Helictopleurus_fasciolatus_pseudofasciolatus:1.0,(Helictopleurus_fasciolatus_obscurus:1.0,Helictopleurus_fasciolatus_fasciolatus:1.0)[&label=0.67]:0.018853)[&label=1]:0.14531,(Helictopleurus_cf_furcicornis:1.0,(('Helictopleurus_fasciolatus suturalis':1.0,Helictopleurus_furcicornis:1.0)[&label=0.74]:0.022158,Helictopleurus_n_sp:1.0)[&label=0.99]:0.050738)[&label=1]:0.081256)[&label=0.9]:0.031981)[&label=1]:0.103974)[&label=1]:0.118104)[&label=0.83]:0.02488)[&label=0.3]:0.0)[&label=0.69]:0.020439)[&label=0.46]:0.007152)[&label=0.97]:0.037483)[&label=1]:0.104565)[&label=0.99]:0.045956)[&label=0.29]:0.0)[&label=1]:0.067267)[&label=1]:0.120461)[&label=1]:0.115528)[&label=1]:0.238874)[&label=1]:0.143895)[&label=1]:0.064356)[&label=1]:0.750228)[&label=1,!rotate=false]:0.089601)[&label=1]:0.067041)[&label=0.57]:0.020429)[&label=0.34]:0.005037)[&label=1]:0.058762)[&label=0.45]:0.005833)[&label=0.72]:0.027818)[&label=0.81]:0.030262)[&label=0.78]:0.022561)[&label=0.24]:0.0)[&label=1]:0.20484)[&label=0.69]:0.040265)[&label=0.89]:0.0846):0.0);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="sansserif";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=439;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="label";
+	set nodeLabels.fontName="sansserif";
+	set nodeLabels.fontSize=10;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=true;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=true;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=10000;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="sansserif";
+	set tipLabels.fontSize=14;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=true;
+	set trees.orderType="decreasing";
+	set trees.rooting=true;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+

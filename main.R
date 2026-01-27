@@ -162,6 +162,15 @@ rug_mt
 plot.phylo(trees$`50p_uce.tre`, show.tip.label = F)
 nodelabels()
 
+# support backbone
+
+backbone_support<- node_presence_matrix2(backbone,
+                         trees,
+                         use_support   = T,
+                         support_col   = 1,    # 1 or 2
+                         round_support = 0)
+
+backbone_support<-backbone_support[,c('node_id','70p_uce.tre')]
 #-------------------- -------------------------------------------------------
 names(trees)
 
@@ -217,13 +226,19 @@ rug_mt_100 <- rug_mt[
   drop = FALSE
 ]
 
+# leave only values in those supports which are < 100% in backbobe and which are not in rug_mt_100
+backbone_support_filtered <- backbone_support
+keep <- !(backbone_support[, "node_id"] %in% rug_mt_100[, "node_id"]) &
+  backbone_support[, "70p_uce.tre"] < 100
+backbone_support_filtered[!keep, "70p_uce.tre"] <- NA
 
+#------
 
 file_base <- "plots/rug_plot_70p_uce"
 # A4 fromat: width = 8.27, height = 11.69
 pdf(
   file = paste0(file_base, ".pdf"),
-  width = 8.27*2, height = 11.69 *2
+  width = 8.27*2, height = 11.69 *3 # A4 size = 8.27 × 11.69 inches
 )
 
 # important patamters:
@@ -231,9 +246,10 @@ pdf(
 # x_offset = -.014,       # tweak horizontal distance from node
 # y_offset = 0.005,
 
-plot.phylo(backbone, show.tip.label = T, align.tip.label = F, cex=0.4, label.offset=.005, no.margin = T)
-#nodelabels(node=rug_mt_100[,1])
- 
+plot.phylo(backbone, show.tip.label = T, align.tip.label = F, cex=0.6, label.offset=.001, no.margin = T)
+# nodelabels(tr$node.label, frame = 'none', cex=0.3, col='red')
+nodelabels(backbone_support_filtered[,2], frame = 'none', cex=0.5, col='red', adj = c(1.2, 1.4))
+
 Ntip <- Ntip(backbone)
 
 # nodelabels(text='X', node=577)
@@ -261,15 +277,15 @@ x_per_inch <- xrange / pin[1]
 y_per_inch <- yrange / pin[2]
 dy <- median(diff(sort(lastPP$yy[1:Ntip])))
 
-cell_h <- dy * 1
+cell_h <- dy * .5 # dy * 1 # cell size
 cell_w <- cell_h * (x_per_inch / y_per_inch)
 
 # Draw node rugs
 plot_node_rug(tree, rug_mt_filt,
               cell_h = cell_h,
               cell_w = cell_w,
-              x_offset = -.014,       # tweak horizontal distance from node
-              y_offset = 0.005,
+              x_offset = -.0075,       # tweak horizontal distance from node
+              y_offset = 0.0023,
               map_to_color = map_to_color,
               pal_info = pal_info)
 

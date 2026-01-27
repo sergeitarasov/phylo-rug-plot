@@ -321,6 +321,8 @@ plot_node_rug <- function(tree, rug_mt,
   
   n_cols <- 3
   n_rows <- 2
+  # n_cols <- 4
+  # n_rows <- 1
   
   total_w <- n_cols * cell_w
   total_h <- n_rows * cell_h

@@ -7,12 +7,8 @@ R script to generate **phylogenetic rug plots** and related visualizations.
 
 ---
 
-### `plots/`
-Final figures for publication, exported in **PDF format**.
 
----
-
-### `raw_trees/`
+### `data/raw_trees/`
 Input directory containing raw phylogenetic trees.
 
 Two datasets are included:
@@ -29,7 +25,16 @@ For each dataset, five phylogenetic analyses were performed:
 
 The tree **`70p_uce.tre`** is treated as the **primary result** and used as the **backbone topology** in downstream analyses.
 
+
+
+
 ---
+
+### `plots/`
+Final figures for publication, exported in **PDF format**.
+
+---
+
 
 ### `trees_processed/`
 Processed tree files used in figures and publications.

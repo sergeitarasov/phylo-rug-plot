@@ -131,20 +131,21 @@ trees$`70p_ASTRAL_partition_entropy.tre`$node.label <- paste0(lb, '/', lb)
 backbone <- trees$`70p_uce.tre`
 
                 
+tree_list <- trees[c(
+  "70p_partition_entropy.tre", "70p_ghost.tre", "70p_ASTRAL_uce.tre",
+  "70p_ASTRAL_partition_entropy.tre"
+)]
+
 # tree_list <- trees[c(
 #   "70p_partition_entropy.tre", "70p_ghost.tre", "70p_ASTRAL_uce.tre",  
-#   "70p_ASTRAL_partition_entropy.tre", "50p_uce.tre", "50p_partition_entropy.tre"
+#   "70p_ASTRAL_partition_entropy.tre", 
+#   "50p_uce.tre", "50p_partition_entropy.tre", "50p_ghost.tre", "50p_ASTRAL_uce.tre",  
+#   "50p_ASTRAL_partition_entropy.tre"
 # )] 
-
-tree_list <- trees[c(
-  "70p_partition_entropy.tre", "70p_ghost.tre", "70p_ASTRAL_uce.tre",  
-  "70p_ASTRAL_partition_entropy.tre", 
-  "50p_uce.tre", "50p_partition_entropy.tre", "50p_ghost.tre", "50p_ASTRAL_uce.tre",  
-  "50p_ASTRAL_partition_entropy.tre"
-)] 
 
 names(tree_list)
 names(trees)
+
 #---- RF distance
 
 
@@ -162,6 +163,9 @@ d <- as.dist(rf.mt)
 # Classical multidimensional scaling
 mds <- cmdscale(d, k = 2)
 
+# ---- open PDF device
+pdf("plots/RF_tree_similarity.pdf", width = 7.5, height = 5)
+
 # Plot points without default labels
 plot(mds[,1], mds[,2],
      ylim=c(-50, 50), xlim=c(-130, 130),
@@ -174,6 +178,7 @@ text(mds[,1], mds[,2],
      labels = rownames(mds),
      pos = 3, cex = 0.5)
 
+dev.off()
 #---
 
 
@@ -191,8 +196,9 @@ rug_mt <- node_presence_matrix2(backbone,
 
 
 rug_mt
-rug_mt[,'70p_ASTRAL_uce.tre'] <- rug_mt[,'70p_ASTRAL_uce.tre']*100
-rug_mt[,'70p_ASTRAL_partition_entropy.tre'] <- rug_mt[,'70p_ASTRAL_partition_entropy.tre']*100
+#rug_mt <- cbind(rug_mt[,1], rug_mt[,c(2:10)]*100)
+# rug_mt[,'70p_ASTRAL_uce.tre'] <- rug_mt[,'70p_ASTRAL_uce.tre']*100
+# rug_mt[,'70p_ASTRAL_partition_entropy.tre'] <- rug_mt[,'70p_ASTRAL_partition_entropy.tre']*100
 rug_mt
 
 plot.phylo(trees$`50p_uce.tre`, show.tip.label = F)
@@ -200,13 +206,27 @@ nodelabels()
 
 # support backbone
 
-backbone_support<- node_presence_matrix2(backbone,
+backbone_support_1<- node_presence_matrix2(backbone,
                          trees,
                          use_support   = T,
                          support_col   = 1,    # 1 or 2
-                         round_support = 0)
+                         round_support = 2)
 
-backbone_support<-backbone_support[,c('node_id','70p_uce.tre')]
+backbone_support_2<- node_presence_matrix2(backbone,
+                                         trees,
+                                         use_support   = T,
+                                         support_col   = 2,    # 1 or 2
+                                         round_support = 2)
+
+# backbone_support<-backbone_support[,c('node_id','70p_uce.tre')]
+backbone_support<-  cbind(
+      node_id=backbone_support_1[,c('node_id')],
+      t70p_uce.tre_1=backbone_support_1[,c('70p_uce.tre')],
+      t70p_uce.tre_2=backbone_support_2[,c('70p_uce.tre')],
+      t70p_uce.tre_comb=paste0(backbone_support_1[,c('70p_uce.tre')], '/', backbone_support_2[,c('70p_uce.tre')])
+      )
+
+  
 #-------------------- -------------------------------------------------------
 names(trees)
 
@@ -231,7 +251,7 @@ pal_info$pal <- gray.colors(
 )
 
 # Breaks from 0 to 1
-pal_info$breaks <- seq(0, 100, length.out=ncol)
+pal_info$breaks <- seq(0, 1, length.out=ncol)
 
 # Fun: vals -> colors
 map_to_color <- function(vals, pal_info) {
@@ -242,31 +262,34 @@ map_to_color <- function(vals, pal_info) {
   cols[vals == 0] <- 'white'  #"aliceblue"  #"skyblue1" "#deebf7"  # this is a special color for 0s
   cols
 }
-map_to_color(70, pal_info)
+map_to_color(1, pal_info)
 
 
 #--------------------  RUG PLOT  -------------------------------------------------------
-layout_df <- rug_layout_map(rug_mt)
+layout_df <- rug_layout_map(rug_mt, n_rows = 2, n_cols = 2)
 head(layout_df)
+layout_df[1:5,]
 
 # filter out 100 support
 rug_mt_filt <- rug_mt[
-  !apply(rug_mt[, -1, drop = FALSE], 1, function(x) all(x == 100)),
+  !apply(rug_mt[, -1, drop = FALSE], 1, function(x) all(x == 1)),
   ,
   drop = FALSE
 ]
 
+
 rug_mt_100 <- rug_mt[
-  apply(rug_mt[, -1, drop = FALSE], 1, function(x) all(x == 100)),
+  apply(rug_mt[, -1, drop = FALSE], 1, function(x) all(x == 1)),
   ,
   drop = FALSE
 ]
 
 # leave only values in those supports which are < 100% in backbobe and which are not in rug_mt_100
 backbone_support_filtered <- backbone_support
-keep <- !(backbone_support[, "node_id"] %in% rug_mt_100[, "node_id"]) &
-  backbone_support[, "70p_uce.tre"] < 100
-backbone_support_filtered[!keep, "70p_uce.tre"] <- NA
+# keep <- !(backbone_support[, "node_id"] %in% rug_mt_100[, "node_id"]) &
+#   backbone_support[, "t70p_uce.tre_1"] != '100' & backbone_support[, "t70p_uce.tre_2"] !='100'
+keep <- backbone_support[, "t70p_uce.tre_1"] != '100' & backbone_support[, "t70p_uce.tre_2"] !='100'
+backbone_support_filtered[!keep, "t70p_uce.tre_comb"] <- NA
 
 #------
 
@@ -274,17 +297,26 @@ file_base <- "plots/rug_plot_70p_uce"
 # A4 fromat: width = 8.27, height = 11.69
 pdf(
   file = paste0(file_base, ".pdf"),
-  width = 8.27*2, height = 11.69 *3 # A4 size = 8.27 × 11.69 inches
+  width = 8.27*2, height = 11.69 *5 # A4 size = 8.27 × 11.69 inches
 )
+
+# pdf(
+#   file = paste0(file_base, ".pdf"),
+#   width = 7.5, height = 8.75 # A4 size = 8.27 × 11.69 inches
+# )
+
+
 
 # important patamters:
 # cell_h <- dy * 1: cells width
 # x_offset = -.014,       # tweak horizontal distance from node
 # y_offset = 0.005,
 
-plot.phylo(backbone, show.tip.label = T, align.tip.label = F, cex=0.6, label.offset=.001, no.margin = T)
+plot.phylo(backbone, show.tip.label = T, align.tip.label = F, cex=0.8, label.offset=.001, no.margin = T, 
+           edge.width = 2
+           )
 # nodelabels(tr$node.label, frame = 'none', cex=0.3, col='red')
-nodelabels(backbone_support_filtered[,2], frame = 'none', cex=0.5, col='red', adj = c(1.2, 1.4))
+nodelabels(backbone_support_filtered[,4], frame = 'none', cex=0.6, col='red', adj = c(1.1, 1.4))
 
 Ntip <- Ntip(backbone)
 
@@ -301,7 +333,7 @@ points(
   lastPP$xx[node_ids],
   lastPP$yy[node_ids],
   pch = 16,        # solid circle
-  cex = 0.8,       # size
+  cex = 1.2,       # size
   col = "black"    # or any color
 )
 
@@ -320,7 +352,7 @@ cell_w <- cell_h * (x_per_inch / y_per_inch)
 plot_node_rug(tree, rug_mt_filt,
               cell_h = cell_h,
               cell_w = cell_w,
-              x_offset = -.0075,       # tweak horizontal distance from node
+              x_offset = -.0095,       # tweak horizontal distance from node
               y_offset = 0.0023,
               map_to_color = map_to_color,
               pal_info = pal_info)

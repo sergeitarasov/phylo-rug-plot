@@ -317,12 +317,13 @@ plot_node_rug <- function(tree, rug_mt,
   
   n_nodes <- nrow(rug_mt)
   n_cells <- ncol(rug_mt) - 1
-  stopifnot(n_cells == 6)
   
-  n_cols <- 3
+  #stopifnot(n_cells == 6)
+  
+  # n_cols <- 3
+  # n_rows <- 2
+  n_cols <- 2
   n_rows <- 2
-  # n_cols <- 4
-  # n_rows <- 1
   
   total_w <- n_cols * cell_w
   total_h <- n_rows * cell_h
@@ -396,69 +397,3 @@ rug_layout_map <- function(rug_mt, n_rows = 2, n_cols = 3) {
   
   layout_df
 }
-# 
-# plot_node_rug <- function(tree, rug_mt, cell_h, cell_w, x_offset = 0.02, y_offset=0,
-#                           map_to_color, pal_info) {
-#   # tree:   phylo backbone used in current plot()
-#   # rug_mt: matrix / data.frame, first col = node_id, next 6 cols = support values
-#   # cell_h, cell_w: precomputed cell height/width (in data units, see above)
-#   # x_offset: fraction of max x to shift the rug to the right of the node
-#   # map_to_color: function(val, pal_info) -> color string
-#   # pal_info: whatever your map_to_color needs
-#   
-#   lastPP <- get("last_plot.phylo", envir = .PlotPhyloEnv)
-#   
-#   # how far to shift rug to the right (in x data units)
-#   dx_offset <- max(lastPP$xx) * x_offset
-#   dy_offset <- max(lastPP$yy) * y_offset
-#   
-#   n_nodes <- nrow(rug_mt)
-#   n_cells <- ncol(rug_mt) - 1   # should be 6 for 2x3
-#   stopifnot(n_cells == 6)
-#   
-#   n_cols <- 3
-#   n_rows <- 2
-#   
-#   total_w <- n_cols * cell_w
-#   total_h <- n_rows * cell_h
-#   
-#   for (i in seq_len(n_nodes)) {
-#     node_id <- rug_mt[i, 1]
-#     vals    <- as.numeric(rug_mt[i, -1])
-#     
-#     # Node coordinates in current phylo plot
-#     x_node <- lastPP$xx[node_id] + dx_offset
-#     #y_node <- lastPP$yy[node_id]
-#     y_node <- lastPP$yy[node_id] + dy_offset
-#     
-#     # Upper-left corner of the entire 2x3 rug
-#     x0 <- x_node - total_w / 2
-#     y0 <- y_node + total_h / 2
-#     
-#     # Draw each cell
-#     for (k in seq_along(vals)) {
-#       val <- vals[k]
-#       
-#       # Row and column in the 2x3 grid
-#       # k: 1..6 -> row = 1..2 (top to bottom), col = 1..3 (left to right)
-#       row_idx <- ceiling(k / n_cols)             # 1 or 2
-#       col_idx <- ((k - 1) %% n_cols) + 1        # 1, 2, or 3
-#       
-#       xleft   <- x0 + (col_idx - 1) * cell_w
-#       xright  <- xleft + cell_w
-#       ytop    <- y0 - (row_idx - 1) * cell_h
-#       ybottom <- ytop - cell_h
-#       
-#       # 0 support -> no color (white / NA), >0 -> gradient
-#       col <- if (val <= 0) {
-#         NA   # or "white" if you want visible white tiles
-#       } else {
-#         map_to_color(val, pal_info)
-#       }
-#       
-#       rect(xleft, ybottom, xright, ytop,
-#            col = col,
-#            border = "black", lwd = 0.4)
-#     }
-#   }
-# }

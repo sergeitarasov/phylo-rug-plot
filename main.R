@@ -130,11 +130,21 @@ trees$`70p_ASTRAL_partition_entropy.tre`$node.label <- paste0(lb, '/', lb)
 
 backbone <- trees$`70p_uce.tre`
 
-tree_list <- trees[c("70p_partition_entropy.tre", "70p_ASTRAL_partition_entropy.tre", "70p_ASTRAL_uce.tre",              
-  "70p_ghost.tre",  "50p_uce.tre", "50p_partition_entropy.tre")]                          
+                
+# tree_list <- trees[c(
+#   "70p_partition_entropy.tre", "70p_ghost.tre", "70p_ASTRAL_uce.tre",  
+#   "70p_ASTRAL_partition_entropy.tre", "50p_uce.tre", "50p_partition_entropy.tre"
+# )] 
+
+tree_list <- trees[c(
+  "70p_partition_entropy.tre", "70p_ghost.tre", "70p_ASTRAL_uce.tre",  
+  "70p_ASTRAL_partition_entropy.tre", 
+  "50p_uce.tre", "50p_partition_entropy.tre", "50p_ghost.tre", "50p_ASTRAL_uce.tre",  
+  "50p_ASTRAL_partition_entropy.tre"
+)] 
 
 names(tree_list)
-
+names(trees)
 #---- RF distance
 
 
@@ -144,14 +154,41 @@ rf <- dist.topo(trees, method = "PH85")
 rf
 rf.mt <- as.matrix(rf)
 sort(rf)
+
+
+# If rf.mt is a matrix of Robinson-Foulds distances
+d <- as.dist(rf.mt)
+
+# Classical multidimensional scaling
+mds <- cmdscale(d, k = 2)
+
+# Plot points without default labels
+plot(mds[,1], mds[,2],
+     ylim=c(-50, 50), xlim=c(-130, 130),
+     xlab = "MDS1", ylab = "MDS2",
+     main = "Tree similarity based on RF distances",
+     pch = 19)
+
+# Add tree names as labels
+text(mds[,1], mds[,2],
+     labels = rownames(mds),
+     pos = 3, cex = 0.5)
+
 #---
 
 
+# rug_mt <- node_presence_matrix2(backbone,
+#                                 tree_list,
+#                                 use_support   = T,
+#                                 support_col   = 1,    # 1 or 2
+#                                 round_support = 2)
+
 rug_mt <- node_presence_matrix2(backbone,
                                 tree_list,
-                                use_support   = T,
+                                use_support   = F,
                                 support_col   = 1,    # 1 or 2
                                 round_support = 2)
+
 
 rug_mt
 rug_mt[,'70p_ASTRAL_uce.tre'] <- rug_mt[,'70p_ASTRAL_uce.tre']*100

@@ -15,13 +15,12 @@ source('utils/utils-sunken.R')
 # read.nexus("trees/70p/astral_70p_partitions.tre")
 
 
-
 #-------------------- 70p -------------------------------------------------------
 
 # this file is used fro translations
 biogeo_data <- read_excel('data/biogeo.xlsx', sheet = "BioGeo")
 
-trees70 <- read_trees_from_dir(dir="raw_trees/70p", ext = "tre", format = "newick")
+trees70 <- read_trees_from_dir(dir="data/raw_trees/70p", ext = "tre", format = "newick")
 trees70 <- trees70
 names(trees70)
 check_same_taxa(trees70)
@@ -71,7 +70,7 @@ source('utils/utils.R')
 source('utils/utils-sunken.R')
 
 biogeo_data <- read_excel('data/biogeo.xlsx', sheet = "BioGeo")
-trees50 <- read_trees_from_dir(dir="raw_trees/50p", ext = "tre", format = "newick")
+trees50 <- read_trees_from_dir(dir="data/raw_trees/50p", ext = "tre", format = "newick")
 names(trees50)
 check_same_taxa(trees50)
 
@@ -291,80 +290,3 @@ plot_node_rug(tree, rug_mt_filt,
 
 dev.off()
 
-# # ==========================
-# # Navajo rug on NODES (2x3 grid per node)
-# # ==========================
-# 
-# lastPP <- get("last_plot.phylo", envir = .PlotPhyloEnv)
-# 
-# # Node coordinates (ape's internal numbering)
-# node_x <- lastPP$xx
-# node_y <- lastPP$yy
-# 
-# # Rug data:
-# # first column: node_id (ape node index)
-# # remaining columns: support for each analysis/tree
-# node_ids   <- rug_mt[, 1]
-# support_mt <- as.matrix(rug_mt[, -1, drop = FALSE])
-# n_nodes    <- nrow(support_mt)
-# n_cells    <- ncol(support_mt)  # number of trees / cells
-# 
-# # We want a 2 (rows) x 3 (cols) layout
-# n_cols <- 3
-# n_rows <- 2
-# if (n_cells > n_cols * n_rows) {
-#   stop("rug_mt has more columns than 2x3 cells can display.")
-# }
-# 
-# # Size of each cell (adjust these multipliers to taste)
-# box_w <- max(lastPP$xx) * 0.012
-# box_h <- max(lastPP$yy) * 0.012
-# # box_w <-.1
-# # box_h <- .1
-# some_offset <- max(lastPP$xx) * 0.01
-# 
-# 
-# i=1
-# for (i in seq_len(n_nodes)) {
-#   nid <- node_ids[i]
-#   x_center <- node_x[nid]
-#   y_center <- node_y[nid]
-#   
-#   # total rug size
-#   total_w <- n_cols * box_w
-#   total_h <- n_rows * box_h
-#   
-#   # top-left corner of the whole 2x3 rug
-#   # x_start <- x_center - total_w / 2
-#   # y_start <- y_center + total_h / 2
-#   x_start <- x_center - 0.01
-#   y_start <- y_center + 5
-#   
-#   # draw each cell
-#   # k=1
-#   for (k in seq_len(n_cells)) {
-#     val <- support_mt[i, k]
-#     
-#     # # skip if NA or 0 support
-#     # if (is.na(val) || val == 0) {
-#     #   fill_col <- NA
-#     # } else {
-#     #   fill_col <- map_to_color(val, pal_info)
-#     # }
-#     fill_col <- map_to_color(val, pal_info)
-#     
-#     # map cell index k -> grid (row, col)
-#     # k = 1..6; fill row-wise from top-left
-#     cell_row <- (k - 1) %/% n_cols  # 0 (top) or 1 (bottom)
-#     cell_col <- (k - 1) %%  n_cols  # 0,1,2
-#     
-#     xleft   <- x_start + cell_col * box_w
-#     xright  <- xleft + box_w
-#     ytop    <- y_start - cell_row * box_h
-#     ybottom <- ytop - box_h
-#     
-#     rect(xleft, ybottom, xright, ytop,
-#          col    = fill_col,
-#          border = "black", lwd = 0.6)
-#   }
-# }
